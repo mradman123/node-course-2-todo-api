@@ -49,7 +49,7 @@ app.get('/todos/:id', (req, res) => {
       return res.status(404).send();
     }
     res.status(200).send({todo});
-  }, (e) => res.status(400).send())
+  }, (e) => res.status(400).send());
 });
 
 app.delete('/todos/:id', (req,res) => {
@@ -105,7 +105,7 @@ app.post('/users', (req, res) => {
     res.header('x-auth', token).send(user);
   }).catch((e) => {
     res.status(400).send(e);
-  })
+  });
 });
 
 
